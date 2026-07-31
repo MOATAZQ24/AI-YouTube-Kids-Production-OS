@@ -1,0 +1,85 @@
+version: '3.8'
+
+services:
+  # Core OS Agent Orchestrator
+  os-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-youtube-os-agent
+    volumes:
+      - ./state:/app/state
+      - ./outputs:/app/outputs
+      - ./knowledge:/app/knowledge
+    environment:
+      - LLM_PROVIDER=${LLM_PROVIDER}
+      - LLM_API_KEY=${LLM_API_KEY}
+      - YOUTUBE_API_KEY=${YOUTUBE_API_KEY}
+      - STABLE_DIFFUSION_API_KEY=${STABLE_DIFFUSION_API_KEY}
+      - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
+    depends_on:
+      - ollama
+      - stable-diffusion
+      - elevenlabs-proxy
+    networks:
+      - ai-youtube-os
+
+  # Local LLM Provider (Optional, can be replaced by API)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ai-youtube-os-ollama
+    volumes:
+      - ollama_data:/root/.ollama
+    ports:
+      - "11434:11434"
+    networks:
+      - ai-youtube-os
+
+  # Image Generation Proxy
+  stable-diffusion:
+    image: gdeva/stable-diffusion-webui:latest
+    container_name: ai-youtube-os-sd
+    volumes:
+      - sd_data:/data
+    ports:
+      - "7860:7860"
+    networks:
+      - ai-youtube-os
+
+  # Audio Generation Proxy
+  elevenlabs-proxy:
+    build:
+      context: ./automation/elevenlabs-proxy
+      dockerfile: Dockerfile
+    container_name: ai-youtube-os-audio
+    environment:
+      - ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY}
+    ports:
+      - "5000:5000"
+    networks:
+      - ai-youtube-os
+
+  # Automation Workflow Engine (n8n)
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: ai-youtube-os-n8n
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=${N8N_PASSWORD}
+    volumes:
+      - n8n_data:/home/node/.n8n
+    networks:
+      - ai-youtube-os
+
+volumes:
+  ollama_data:
+  sd_data:
+  n8n_data:
+
+networks:
+  ai-youtube-os:
+    driver: bridge

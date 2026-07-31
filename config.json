@@ -1,0 +1,29 @@
+{
+  "project": "AI-YouTube-Kids-Production-OS",
+  "version": "1.0.0",
+  "thresholds": {
+    "min_viral_score": 7.0,
+    "min_script_score": 8.0,
+    "min_qa_score": 9.0,
+    "max_retries": 3
+  },
+  "api_endpoints": {
+    "youtube_data_api": "https://www.googleapis.com/youtube/v3",
+    "stable_diffusion": "http://localhost:7860/sdapi/v1/txt2img",
+    "elevenlabs": "https://api.elevenlabs.io/v1",
+    "ollama": "http://localhost:11434/api/generate"
+  },
+  "environment_variables": {
+    "YOUTUBE_API_KEY": "${YOUTUBE_API_KEY}",
+    "STABLE_DIFFUSION_API_KEY": "${STABLE_DIFFUSION_API_KEY}",
+    "ELEVENLABS_API_KEY": "${ELEVENLABS_API_KEY}",
+    "LLM_PROVIDER": "${LLM_PROVIDER}",
+    "LLM_API_KEY": "${LLM_API_KEY}"
+  },
+  "production_settings": {
+    "target_duration_seconds": 180,
+    "max_scenes_per_script": 10,
+    "default_language": "en",
+    "supported_languages": ["en", "es", "fr", "ar"]
+  }
+}
