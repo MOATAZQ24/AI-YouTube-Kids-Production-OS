@@ -1,0 +1,139 @@
+{
+  "project_id": "solar_system_project",
+  "status": "completed",
+  "current_phase": 7,
+  "metadata": {
+    "created_at": "2026-07-31T12:00:00Z",
+    "updated_at": "2026-07-31T12:05:00Z",
+    "assigned_character": "curious_robot",
+    "target_language": "en"
+  },
+  "phases": {
+    "phase_1_strategist": {
+      "status": "completed",
+      "output": {
+        "concept": "A friendly robot named Robo explores the solar system, learning about each planet.",
+        "target_age_group": "4-6",
+        "educational_goal": "Introduce planets and basic solar system facts",
+        "unique_selling_point": "Interactive learning with a curious robot",
+        "main_characters": [
+          {
+            "name": "Robo",
+            "traits": "curious, friendly, metallic blue"
+          }
+        ]
+      },
+      "decision_matrix": {
+        "score": 9.5
+      }
+    },
+    "phase_2_researcher": {
+      "status": "completed",
+      "output": {
+        "learning_objectives": [
+          "Identify planets by name",
+          "Understand basic size differences"
+        ],
+        "attention_span_limit": "5-7 mins",
+        "engagement_hooks": [
+          "Robo asks questions",
+          "Repetitive planet song"
+        ]
+      },
+      "decision_matrix": {
+        "score": 9.5
+      }
+    },
+    "phase_3_writer": {
+      "status": "completed",
+      "output": {
+        "character_bible": {
+          "Robo": {
+            "appearance": "metallic blue, round eyes",
+            "personality": "curious"
+          }
+        },
+        "script": [
+          {
+            "scene": 1,
+            "setting": "Robo's spaceship",
+            "dialogue": "Hello, friends! Today we explore!",
+            "action": "Robo waves"
+          },
+          {
+            "scene": 2,
+            "setting": "Orbiting Earth",
+            "dialogue": "Look, a blue planet!",
+            "action": "Robo points"
+          }
+        ]
+      },
+      "decision_matrix": {
+        "score": 9.5
+      }
+    },
+    "phase_4_production": {
+      "status": "completed",
+      "output": {
+        "scene_1": {
+          "image_prompt": "3D Pixar-like, bright pastel colors, soft lighting, simple backgrounds. Robo, metallic blue, round eyes, waving in a spaceship cockpit.",
+          "video_prompt": "Robo waves slowly, then points to a window.",
+          "camera": "Wide Shot",
+          "actions_emotions": "Robo: happy, curious, waving arms",
+          "voice_sfx": "High-pitched, energetic voice. Spaceship hum, happy chime."
+        },
+        "scene_2": {
+          "image_prompt": "3D Pixar-like, bright pastel colors, soft lighting, simple backgrounds. Robo, metallic blue, round eyes, pointing at a blue planet outside the window.",
+          "video_prompt": "Robo points with one arm, then turns head to look at the planet.",
+          "camera": "Slow Push-in on Robo's face",
+          "actions_emotions": "Robo: amazed, pointing",
+          "voice_sfx": "Energetic voice. Twinkling sound effect."
+        }
+      },
+      "decision_matrix": {
+        "score": 9.5
+      }
+    },
+    "phase_5_seo": {
+      "status": "completed",
+      "output": {
+        "titles": [
+          "Robo's Space Adventure!",
+          "Learn Planets with Robo!",
+          "Kids Explore Solar System!"
+        ],
+        "best_title": "Robo's Space Adventure!",
+        "description": "Join Robo on an amazing journey through the solar system! Learn about planets, stars, and more in this fun educational video for kids. #KidsLearning #SolarSystem #Robo",
+        "keywords": [
+          "kids animation",
+          "solar system",
+          "planets",
+          "learning for kids",
+          "space adventure",
+          "educational video"
+        ],
+        "thumbnail_concept": "Robo's big, friendly face with Earth and Mars in the background, bright colors."
+      },
+      "decision_matrix": {
+        "score": 9.5
+      }
+    },
+    "phase_6_analyst": {
+      "status": "completed",
+      "output": {
+        "summary": "Initial performance good, but retention drops at scene 2.",
+        "weaknesses": [
+          "Scene 2 too long",
+          "Not enough interaction"
+        ],
+        "actionable_changes": [
+          "Shorten Scene 2 dialogue",
+          "Add a 'what do you see?' prompt in Scene 2"
+        ]
+      },
+      "decision_matrix": {
+        "score": 9.5
+      }
+    }
+  }
+}
