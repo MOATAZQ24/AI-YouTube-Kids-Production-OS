@@ -9,8 +9,9 @@ This repository serves as the **Single Source of Truth (SSOT)** for the brand, e
 ## Key Features
 
 - **Viral Intelligence Engine**: Data-driven idea generation and trend analysis tailored for the kids' demographic.
-- **Character & World System**: Advanced frameworks to maintain visual and personality consistency.
-- **Automated Workflows**: Streamlined production pipelines from scripting to SEO.
+- **Comprehensive Knowledge Bibles**: Detailed Character, World, and Story Bibles extracted from proven creative frameworks.
+- **Multi-Shot Cinematic Method**: A standardized 5-shot production workflow for consistent visual storytelling.
+- **Enhanced Prompt Library**: Specialized libraries for Image, Animation, Voice, and SEO generation.
 - **Multi-Agent Architecture**: Specialized AI agents for strategy, writing, visuals, voice, and quality control.
 - **Long-Term Memory**: A learning system that improves production based on historical performance data.
 
