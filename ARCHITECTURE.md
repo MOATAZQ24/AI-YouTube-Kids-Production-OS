@@ -1,8 +1,45 @@
 # System Architecture
 
+## Purpose
+
+This document details the foundational design and interconnections of the AI-YouTube-Kids-Production-OS. It serves as a blueprint for understanding how various AI agents, knowledge bases, and workflows collaborate to produce YouTube Kids content.
+
+## Context
+
+The architecture is designed to be modular, scalable, and maintainable, enabling continuous improvement and easy integration of new AI models or tools. It ensures brand and character consistency across all content outputs.
+
+## Inputs
+
+- **Brand Guidelines**: Defined in `knowledge/brand/bible.md`.
+- **Character Definitions**: Stored in `knowledge/characters/`.
+- **World-Building Rules**: Documented in `knowledge/world/world_bible.md`.
+- **Content Strategy**: Derived from the Viral Intelligence Engine.
+
+## Outputs
+
+- **Cohesive Content**: Videos, scripts, and assets that adhere to brand standards.
+- **Operational Efficiency**: Streamlined production processes.
+- **Learning Insights**: Data for continuous system improvement.
+
+## Related Files
+
+- `README.md`
+- `knowledge/` (all subdirectories)
+- `viral_engine/`
+- `workflows/`
+- `prompts/`
+- `memory/`
+- `analytics/`
+
+## Dependencies
+
+- **AI Models**: Various LLMs and generative AI for text, image, and video.
+- **Automation Platforms**: n8n, GitHub Actions.
+- **Data Storage**: Google Drive, GitHub repository.
+
 ## Design Philosophy
 
-The AI-YouTube-Kids-Production-OS is built on the principles of **Modularity**, **Consistency**, and **Scalability**. It transition from a simple collection of prompts to a cohesive digital production ecosystem.
+The AI-YouTube-Kids-Production-OS is built on the principles of **Modularity**, **Consistency**, and **Scalability**. It transitions from a simple collection of prompts to a cohesive digital production ecosystem.
 
 ## Core Components
 
@@ -50,3 +87,7 @@ graph TD
     A --> M[Memory System]
     M --> K
 ```
+
+## Examples
+
+For practical examples of how these architectural components are implemented, refer to the specific documentation within the `knowledge/`, `viral_engine/`, `workflows/`, and `prompts/` directories.

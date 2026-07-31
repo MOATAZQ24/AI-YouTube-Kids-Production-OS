@@ -1,5 +1,38 @@
 # Character Profile: Rosie the Curious Rabbit
 
+## Purpose
+
+This document provides a comprehensive profile for Rosie the Curious Rabbit, a primary protagonist in the AI-YouTube-Kids-Production-OS. Its purpose is to ensure consistent portrayal of her appearance, personality, and behavior across all generated content.
+
+## Context
+
+As a detailed character definition within the `knowledge/characters/` directory, this profile guides AI agents in generating visuals, animations, and dialogue that are true to Rosie's established identity. It is a critical input for maintaining character consistency.
+
+## Inputs
+
+- **Nature Exploration Prompt Framework**: Initial creative brief for Rosie.
+- **Brand Bible**: `knowledge/brand/bible.md` (for overall visual style and tone).
+
+## Outputs
+
+- **Consistent Visuals**: AI-generated images and animations of Rosie that match her defined appearance.
+- **Authentic Dialogue**: Scripts and voiceovers that reflect Rosie's personality and vocal style.
+
+## Related Files
+
+- `knowledge/characters/template.md`
+- `knowledge/brand/bible.md`
+- `knowledge/stories/story_bible.md`
+- `prompts/image/library.md`
+- `prompts/video/animation_prompts.md`
+- `prompts/voice/voice_prompts.md`
+
+## Dependencies
+
+- **Character Agent**: Ensures Rosie's consistency across all content.
+- **Visual Agent**: Uses image and animation prompts for asset generation.
+- **Writer Agent**: References personality and voice style for dialogue.
+
 ## Core Identity
 
 - **ID**: CHAR-001
@@ -36,3 +69,9 @@
 
 ## Version History
 - **v1.0**: Initial profile created based on "Nature Exploration" framework.
+
+
+## Examples
+
+- **Visual Consistency**: When generating an image of Rosie, the AI should always depict her with fluffy white fur and a pink bow, as specified.
+- **Behavioral Example**: In a scene where Rosie encounters a new flower, her animation should include a gentle hop and a head tilt, followed by sniffing the flower with her magnifying glass.
